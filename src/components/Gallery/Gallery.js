@@ -1,31 +1,34 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { fetchGallery } from "./actions";
+// GalleryComponent.js
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import LazyLoad from 'react-lazyload'; // Import the LazyLoad component
+import { fetchGallery } from '../galleryActions';
 
-function Gallery({ gallery, loading, error, fetchGallery }) {
+const Gallery = () => {
+  const dispatch = useDispatch();
+  const { gallery, loading, error } = useSelector((state) => state.gallery);
+
   useEffect(() => {
-    fetchGallery();
-  }, []);
-  if (loading) return <div>Loading.....</div>;
-  if (error) return <div>Error: {error}</div>;
+    dispatch(fetchGallery());
+  }, [dispatch]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading the gallery: {error}</div>;
+
   return (
-    <div>
-      <h2>Gallery</h2>
-      <ul>
-        {gallery.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
+    <div className='galleryContainer'>
+      {gallery.map((item) => (
+        <div className='galleryComponents' key={item.id}>
+          <LazyLoad height={200} offset={100}>
+            {/* Wrap the image inside LazyLoad */}
+            <img src={item.thumbnailUrl} alt={item.title} />
+          <p>{item.title}</p>
+          </LazyLoad>
+        </div>
+      ))}
     </div>
   );
-}
-const mapStateToProps = (state) => ({
-  gallery: state.gallery,
-  loading: state.loading,
-  error: state.error,
-});
-
-const mapDispatchToProps = {
-  fetchGallery,
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Gallery);
+
+export default Gallery;
+ 

@@ -34,7 +34,9 @@ const TicTac = () => {
     return (
       <div className="game">
         <div className="game-board">
+          <div className="gameContent">
           <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+          </div>
         </div>
         <div className="game-info">
           <div><p>{moves}</p></div>

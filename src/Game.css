@@ -10,11 +10,12 @@ div.game-info {
     height: 400px;
     width: 400px;
     text-align: left;
-    border-color: black;
+    border-color: rgb(77, 74, 74);
     border-style: dashed;
     border-radius: 5cap;
-    background-color: black;
+    background-color: rgb(77, 74, 74);
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     
 }
 .game-info button{
@@ -25,7 +26,33 @@ div.game-info {
     padding: 2px;
     
 }
+.input{
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.button {
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .game-info div {
+}
+.displayTree {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+justify-content: center;
+}
+.gameContent{
+    margin-top: 25%;
+align-items: center;
+justify-content: center;
+}
+.inputContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button.square {
@@ -43,11 +70,12 @@ div.game-board {
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 40px;
-    border-color: black;
+    border-color: rgb(77, 74, 74);
     border-style: dashed;
     border-radius: 5cap;
-    background-color: black;
+    background-color: rgb(77, 74, 74);
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 div.secondboard{
     display: block;
@@ -55,11 +83,12 @@ div.secondboard{
     margin-left: 40px;
     height: 400px;
     width: 400px;
-    border-color: black;
+    border-color: rgb(77, 74, 74);
     border-style: dashed;
     border-radius: 5cap;
-    background-color: black;
+    background-color: rgb(77, 74, 74);
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .board-row{
 display: flex; 
@@ -68,10 +97,14 @@ justify-content: center;
 }
 nav {
     display: flex; 
+    height: 40px;
     justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
     background-color: brown;
+}
+nav a {
+    vertical-align: middle;
 }
 ul {
     display: flex; 
@@ -86,7 +119,6 @@ align-items: center;
 justify-content: center;
 }
 .formInput {
-    display:flex;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -100,12 +132,12 @@ justify-content: center;
     border-color: black;
     border-style: dashed;
     border-radius: 5cap;
-    background-color: black;
+    background-color: rgb(77, 74, 74);
     color: white;
     align-items: center;
     text-align: center;
     justify-content: center;
-     
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .inputForm button{
     
@@ -127,3 +159,51 @@ justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
 }
+.galleryContainer {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 4px;
+  }
+  
+  .galleryComponents {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .galleryComponents img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Start with 0 opacity */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
+  }
+  
+  .galleryComponents p {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2; /* Ensure the title is on top of the image */
+      background: rgba(255, 255, 255, 0.8); /* Optional: Add a background for better visibility */
+      padding: 8px; 
+      animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
+    }
+    
+    .galleryComponents p {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0; /* Remove default margin */
+        animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }

@@ -37,17 +37,18 @@ const TreeBuilder = () => {
     };
   
     return (
+      <div className='inputContainer'>
         <div className='inputForm'>
       <form className='formInput' onSubmit={handleSubmit}>
         <label className='label-name'>
-          Type number: 
+          Type number:  
           <input
             type="number"
             value={inputValue}
             onChange={handleInputChange}
           />
-        </label>
         <button type="submit">Submit</button>
+        </label>
         <div className='displayTree'>
         {treeObjects.map((object, index) => (
           <div  key={index}>
@@ -58,6 +59,7 @@ const TreeBuilder = () => {
         ))}
       </div>
       </form>
+      </div>
       </div>
     );
   };
