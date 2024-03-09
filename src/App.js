@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route,Link,useLocation } from 'react-router-dom';
+import  TreeBuilder from './components/TreeBuilder/TreeBuilder'; 
+import TicTac from './components/TicTac/TicTac';
+import './Game.css';
+import './components/TreeBuilder/TreeBuilder.css'
 
-function App() {
+
+const RouteChangeListener = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle route changes
+    console.log(`Route changed to ${location.pathname}`);
+  }, [location]);
+
+  return null; // This component doesn't render anything
+};
+
+export default function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <RouteChangeListener />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Game</Link>
+            </li>
+            <li>
+              <Link to="/input">Input</Link>
+            </li>
+            <li>
+              <Link to="/gallery">Gallery</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route exact path="/">
+            <TicTac />
+          </Route>
+          <Route path="/input">
+            <TreeBuilder />
+          </Route>
+          <Route path="/gallery">
+            <div><p>Gallery</p></div>
+          </Route>
+        </Switch>    
+    </Router>
   );
 }
-
-export default App;

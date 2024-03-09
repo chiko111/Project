@@ -1,0 +1,129 @@
+div.game {
+    text-align: center;
+    display:flex;
+}
+div.game-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    height: 400px;
+    width: 400px;
+    text-align: left;
+    border-color: black;
+    border-style: dashed;
+    border-radius: 5cap;
+    background-color: black;
+    color: white;
+    
+}
+.game-info button{
+    width: 150px;
+    color:white;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 2px;
+    padding: 2px;
+    
+}
+.game-info div {
+}
+
+button.square {
+    height: 60px;
+    width: 60px;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0px;
+    display: inline
+}
+div.game-board {
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-color: black;
+    border-style: dashed;
+    border-radius: 5cap;
+    background-color: black;
+    color: white;
+}
+div.secondboard{
+    display: block;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 400px;
+    width: 400px;
+    border-color: black;
+    border-style: dashed;
+    border-radius: 5cap;
+    background-color: black;
+    color: white;
+}
+.board-row{
+display: flex; 
+align-items: center;
+justify-content: center;
+}
+nav {
+    display: flex; 
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: brown;
+}
+ul {
+    display: flex; 
+    
+}
+a{
+    margin: 5px;
+}
+.game{
+    display: flex; 
+align-items: center;
+justify-content: center;
+}
+.formInput {
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.inputForm{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 400px;
+    width: 400px;
+    border-color: black;
+    border-style: dashed;
+    border-radius: 5cap;
+    background-color: black;
+    color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+     
+}
+.inputForm button{
+    
+    display: flex; 
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+.content-input{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.label-name{
+    display: flex; 
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
