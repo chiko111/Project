@@ -1,21 +1,24 @@
-import { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { playMove, jumpToMove } from '../action';
 import { Board } from "./Board";
-import { useLocation } from 'react-router-dom';
 
 const TicTac = () => {
-    const [history, setHistory] = useState([Array(9).fill(null)]);
-    const [currentMove, setCurrentMove] = useState(0);
-    const xIsNext = currentMove % 2 === 0;
-    const currentSquares = history[currentMove];
-    function handlePlay(nextSquares) {
-      const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
-      setHistory(nextHistory);
-      setCurrentMove(nextHistory.length - 1);
-    }
-  
-    function jumpTo(nextMove) {
-      setCurrentMove(nextMove);
-    }
+  console.log(useSelector((state) => state.game.currentMove));
+  const history = useSelector((state) => state.game.history);
+  const currentMove = useSelector((state) => state.game.currentMove);
+  const dispatch = useDispatch();
+
+  const xIsNext = currentMove % 2 === 0;
+  const currentSquares = history[currentMove];
+
+  const handlePlay = (nextSquares) => {
+    dispatch(playMove(nextSquares));
+  };
+
+  const jumpTo = (nextMove) => {
+    dispatch(jumpToMove(nextMove));
+  };
+
   
     const moves = history.map((squares, move) => {
       let description;

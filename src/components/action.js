@@ -9,3 +9,12 @@ export const fetchGallery = () => {
       .catch(error => dispatch({ type: FETCH_GALLERY_FAILURE, payload: error }));
   };
 };
+export const playMove = (nextSquares) => ({
+  type: 'PLAY_MOVE',
+  payload: nextSquares,
+});
+
+export const jumpToMove = (nextMove) => ({
+  type: 'JUMP_TO_MOVE',
+  payload: nextMove,
+});

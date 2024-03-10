@@ -1,5 +1,4 @@
-// galleryActions.js
-import { FETCH_GALLERY_REQUEST, FETCH_GALLERY_SUCCESS, FETCH_GALLERY_FAILURE } from './actionTypes';
+import { FETCH_GALLERY_REQUEST, FETCH_GALLERY_SUCCESS, FETCH_GALLERY_FAILURE,ADD_TO_FAVORITES,REMOVE_FROM_FAVORITES } from './actionTypes';
 
 export const fetchGalleryRequest = () => ({
   type: FETCH_GALLERY_REQUEST,
@@ -14,7 +13,22 @@ export const fetchGalleryFailure = (error) => ({
   type: FETCH_GALLERY_FAILURE,
   payload: error,
 });
+export const addToFavorites = (id) => ({
+  type: ADD_TO_FAVORITES,
+  payload: { id },
+});
 
+export const removeFromFavorites = (id) => ({
+  type: REMOVE_FROM_FAVORITES,
+  payload: { id },
+});
+export const toggleFavorite = (id) => (dispatch, getState) => {
+  const { favorites } = getState().gallery;
+  dispatch({
+    type: favorites.includes(id) ? REMOVE_FROM_FAVORITES : ADD_TO_FAVORITES,
+    payload: { id },
+  });
+};
 export const fetchGallery = () => {
   return async (dispatch) => {
     dispatch(fetchGalleryRequest());

@@ -19,8 +19,9 @@ const TreeBuilder = () => {
     const numberRegex = /^[0-9]+$/;
   
     const handleInputChange = (event) => {
-      const value = event.target.value;
+      let value = event.target.value;
       if (value === '' || numberRegex.test(value)) {
+        value = value === '' ? '' : Math.min(parseInt(value, 10), 15).toString();
         setInputValue(value);
       }
     };

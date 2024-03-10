@@ -1,9 +1,10 @@
-// rootReducer.js
 import { combineReducers } from 'redux';
 import galleryReducer from './galleryReducer';
+import ticTacReducer from './ticTacReducer';
 
 const rootReducer = combineReducers({
-  gallery: galleryReducer, // Ensure the key matches what you use in useSelector
+  gallery: galleryReducer, 
+  game: ticTacReducer
   // other reducers if any
 });
 
