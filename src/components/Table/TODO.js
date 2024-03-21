@@ -3,32 +3,28 @@ import "./TODO.css";
 
 const TODO = () => {
   const [inputValue, setInputValue] = useState("");
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(
+    JSON.parse(localStorage.getItem("todoList")) || []
+  );
 
   useEffect(() => {
-    const todoList = JSON.parse(localStorage.getItem("todoList"));
-    if (todoList) {
-      setTodoList(todoList);
-    }
-  }, []);
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+  }, [todoList]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (inputValue) {
-      setTodoList([...todoList, inputValue]);
-      localStorage.setItem(
-        "todoList",
-        JSON.stringify([...todoList, inputValue])
-      );
+      setTodoList((prevList) => [...prevList, inputValue]);
       setInputValue("");
     }
   };
 
-  const handleDelete = (index) => {
-    const newTodoList = [...todoList];
-    newTodoList.splice(index, 1);
+  const handleDelete = (indexToDelete) => {
+    console.log(todoList);
+    console.log(indexToDelete);
+    const newTodoList = todoList.filter((_, index) => indexToDelete !== index);
+    console.log(newTodoList);
     setTodoList(newTodoList);
-    localStorage.setItem("todoList", JSON.stringify(newTodoList));
   };
 
   return (
