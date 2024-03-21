@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./components/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./components/store";
 import Navigation from "./components/Navigation";
 import RouteChangeListener from "./components/RouteChangeListener";
 import TreeBuilder from "./components/TreeBuilder/TreeBuilder";
@@ -14,27 +15,29 @@ import ReduxTODO from "./components/ReduxTODO/ReduxTODO";
 
 const App = () => (
   <Provider store={store}>
-    <Router>
-      <RouteChangeListener />
-      <Navigation />
-      <Switch>
-        <Route exact path="/">
-          <TicTac />
-        </Route>
-        <Route path="/input">
-          <TreeBuilder />
-        </Route>
-        <Route path="/gallery">
-          <Gallery />
-        </Route>
-        <Route exact path="/table">
-          <TODO />
-        </Route>
-        <Route exact path="/reduxtodo">
-          <ReduxTODO />
-        </Route>
-      </Switch>
-    </Router>
+    <PersistGate loading={null} persistor={persistor}>
+      <Router>
+        <RouteChangeListener />
+        <Navigation />
+        <Switch>
+          <Route exact path="/">
+            <TicTac />
+          </Route>
+          <Route path="/input">
+            <TreeBuilder />
+          </Route>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+          <Route exact path="/table">
+            <TODO />
+          </Route>
+          <Route exact path="/reduxtodo">
+            <ReduxTODO />
+          </Route>
+        </Switch>
+      </Router>
+    </PersistGate>
   </Provider>
 );
 
