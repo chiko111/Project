@@ -1,326 +1,376 @@
 div.game {
-    text-align: center;
-    display:flex;
+  text-align: center;
+  display: flex;
 }
 div.game-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    height: 400px;
-    width: 400px;
-    text-align: left;
-    border-color: rgb(77, 74, 74);
-    border-style: dashed;
-    border-radius: 5cap;
-    background-color: rgb(77, 74, 74);
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  height: 400px;
+  width: 400px;
+  text-align: left;
+  border-color: rgb(77, 74, 74);
+  border-style: dashed;
+  border-radius: 5cap;
+  background-color: rgb(77, 74, 74);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.game-info button{
-    width: 150px;
-    color:white;
-    border: 1px solid rgb(255, 255, 255);
-    margin: 2px;
-    padding: 2px;
-    
+.game-info button {
+  width: 150px;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  margin: 2px;
+  padding: 2px;
 }
-.input{
-    padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+.input {
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .button {
-    padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .game-info div {
 }
 .displayTree {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.gameContent{
-    margin-top: 25%;
-align-items: center;
-justify-content: center;
+.gameContent {
+  margin-top: 25%;
+  align-items: center;
+  justify-content: center;
 }
-.gameContent .status{
-    margin-bottom: 15px;;
+.gameContent .status {
+  margin-bottom: 15px;
 }
-.inputContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button.square {
-    height: 60px;
-    width: 60px;
-    color: white;
-    border: 1px solid rgb(255, 255, 255);
-    margin: 0px;
-    display: inline;
-    box-shadow: rgb(22, 22, 22) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+  height: 60px;
+  width: 60px;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  margin: 0px;
+  display: inline;
+  box-shadow: rgb(22, 22, 22) 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
 }
 div.game-board {
-    height: 400px;
-    width: 400px;
-    text-align: center;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 40px;
-    border-color: rgb(77, 74, 74);
-    border-style: dashed;
-    border-radius: 5cap;
-    background-color: rgb(77, 74, 74);
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  border-color: rgb(77, 74, 74);
+  border-style: dashed;
+  border-radius: 5cap;
+  background-color: rgb(77, 74, 74);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-div.secondboard{
-    display: block;
-    margin-top: 40px;
-    margin-left: 40px;
-    height: 400px;
-    width: 400px;
-    border-color: rgb(77, 74, 74);
-    border-style: dashed;
-    border-radius: 5cap;
-    background-color: rgb(77, 74, 74);
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+div.secondboard {
+  display: block;
+  margin-top: 40px;
+  margin-left: 40px;
+  height: 400px;
+  width: 400px;
+  border-color: rgb(77, 74, 74);
+  border-style: dashed;
+  border-radius: 5cap;
+  background-color: rgb(77, 74, 74);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.board-row{
-display: flex; 
-align-items: center;
-justify-content: center;
+.board-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 nav {
-    display: flex; 
-    height: 40px;
-    justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: rgb(150, 0, 0);
-    z-index: 3;
-    position: sticky; top: 0;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgb(150, 0, 0);
+  z-index: 3;
+  position: sticky;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 nav a {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 ul {
-    display: flex; 
-    
-        align-items: center;
-        justify-content: center;
-      
-    
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
 }
 
-
- .btn-one {
-	color: #FFF;
-	transition: all 0.3s;
-	position: relative;
-    text-transform: uppercase;
-    margin-left: 10px;
-    margin-right: 10px;
+.btn-one {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+  text-transform: uppercase;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .btn-one span {
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 .btn-one::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.3s;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-color: rgba(255,255,255,0.5);
-	border-bottom-color: rgba(255,255,255,0.5);
-	transform: scale(0.1, 1);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
 }
 .btn-one:hover span {
-	letter-spacing: 2px;
+  letter-spacing: 2px;
 }
 .btn-one:hover::before {
-	opacity: 1;	
-	transform: scale(1, 1);	
+  opacity: 1;
+  transform: scale(1, 1);
 }
 .btn-one::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	transition: all 0.3s;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
 }
 .btn-one:hover::after {
-	opacity: 0;	
-	transform: scale(0.1, 1);
+  opacity: 0;
+  transform: scale(0.1, 1);
 }
 
-.game{
-    display: flex; 
-align-items: center;
-justify-content: center;
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .formInput {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-.formInput input{
-    margin-left: 10px;
+.formInput input {
+  margin-left: 10px;
 }
-.formInput button{
-    margin-left: 10px;
-    border-color: white;
-    border-style: solid;
-    padding: 2px;
+.formInput button {
+  margin-left: 10px;
+  border-color: white;
+  border-style: solid;
+  padding: 2px;
 }
-.inputForm{
+.inputForm {
+  display: flex;
+  margin-top: 40px;
+  height: 400px;
+  width: 400px;
+  border-color: rgb(77, 74, 74);
+  border-style: solid;
+  border-radius: 5cap;
+  background-color: rgb(77, 74, 74);
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  .row {
     display: flex;
-    margin-top: 40px;
-    height: 400px;
-    width: 400px;
-    border-color: rgb(77, 74, 74);
-    border-style: solid;
-    border-radius: 5cap;
-    background-color: rgb(77, 74, 74);
-    color: white;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 100%;
+    height: 310px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #4d4a4a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .row div {
+    display: flex;
+    margin: 4px;
+    width: 330px;
+  }
+  .row p {
+    /* width: calc(100% - 80px); */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 0;
+  }
+  .row button {
+    margin-left: auto;
+  }
 }
-.inputForm button{
-    
-    display: flex; 
-    justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
+.inputForm button {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
 }
-.content-input{
-    display:flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+
+.content-input {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-.label-name{
-    display: flex; 
-    justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 10pt;
+.label-name {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10pt;
 }
 .galleryContainer {
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 4px;
-  }
-  
-  .galleryComponents {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .galleryComponents img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0; /* Start with 0 opacity */
-    animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
-  }
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 4px;
+}
 
-  
-  .galleryComponents p {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      height: 100px;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: 2; /* Ensure the title is on top of the image */
-      background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 60%, rgb(255 255 255 / 0%) 100%);
-      width: 100%;
-      padding: 20px; 
-      animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
-    }
-    
-    .galleryComponents p {
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: 0; /* Remove default margin */
-        animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    .textLoading {
-        color: white;
-      }
-      
-      .favorite-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 5px 10px;
-        cursor: pointer;
-        color: #000; /* Set the initial color for the icon */
-        z-index: 2;
-      }
-      
-      .favorite-button:hover {
-        /* Remove the color change on hover */
-        /* color: #FFF; */
-      }
-      
-      .galleryComponents.favorite .favorite-button {
-        /* Change the color for favorite items */
-        color: #7c7005;
-      }
-      .GalleryFooter{
-        
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px -4px 2px, rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px -16px 8px, rgba(0, 0, 0, 0.09) 0px -32px 16px;
-          }
-          
-          .GalleryFooter p {
-            margin: 0;
-          }
+.galleryComponents {
+  position: relative;
+  overflow: hidden;
+}
 
-    .GalleryFooter img{
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+.galleryComponents img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Start with 0 opacity */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
+}
+
+.galleryComponents p {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2; /* Ensure the title is on top of the image */
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.2) 60%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  width: 100%;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
+}
+
+.galleryComponents p {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Animation properties */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.textLoading {
+  color: white;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #000; /* Set the initial color for the icon */
+  z-index: 2;
+}
+
+.favorite-button:hover {
+  /* Remove the color change on hover */
+  /* color: #FFF; */
+}
+
+.galleryComponents.favorite .favorite-button {
+  /* Change the color for favorite items */
+  color: #7c7005;
+}
+.GalleryFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px -4px 2px,
+    rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px -16px 8px,
+    rgba(0, 0, 0, 0.09) 0px -32px 16px;
+}
+
+.GalleryFooter p {
+  margin: 0;
+}
+
+.GalleryFooter img {
+  margin-left: 5px;
+  margin-right: 5px;
+}

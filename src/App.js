@@ -9,6 +9,8 @@ import TicTac from "./components/TicTac/TicTac";
 import Gallery from "./components/Gallery/Gallery";
 import "./Game.css";
 import "./components/TreeBuilder/TreeBuilder.css";
+import TODO from "./components/Table/TODO";
+import ReduxTODO from "./components/ReduxTODO/ReduxTODO";
 
 const App = () => (
   <Provider store={store}>
@@ -24,6 +26,12 @@ const App = () => (
         </Route>
         <Route path="/gallery">
           <Gallery />
+        </Route>
+        <Route exact path="/table">
+          <TODO />
+        </Route>
+        <Route exact path="/reduxtodo">
+          <ReduxTODO />
         </Route>
       </Switch>
     </Router>
