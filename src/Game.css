@@ -18,6 +18,21 @@ div.game-info {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+.albumContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+  text-align: left;
+  border-color: rgb(77, 74, 74);
+  border-style: dashed;
+  border-radius: 5cap;
+  background-color: rgb(77, 74, 74);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 .game-info button {
   width: 150px;
   color: white;
@@ -280,7 +295,13 @@ ul {
   margin-right: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 4px;
+  gap: 15px;
+}
+.buttonAlbum {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .galleryComponents {

@@ -7,11 +7,12 @@ import Navigation from "./components/Navigation";
 import RouteChangeListener from "./components/RouteChangeListener";
 import TreeBuilder from "./components/TreeBuilder/TreeBuilder";
 import TicTac from "./components/TicTac/TicTac";
-import Gallery from "./components/Gallery/Gallery";
-import "./Game.css";
-import "./components/TreeBuilder/TreeBuilder.css";
 import TODO from "./components/Table/TODO";
 import ReduxTODO from "./components/ReduxTODO/ReduxTODO";
+import MainGallery from "./components/Gallery/AlbumGallery";
+
+import "./Game.css";
+import "./components/TreeBuilder/TreeBuilder.css";
 
 const App = () => (
   <Provider store={store}>
@@ -26,9 +27,7 @@ const App = () => (
           <Route path="/input">
             <TreeBuilder />
           </Route>
-          <Route path="/gallery">
-            <Gallery />
-          </Route>
+          <MainGallery />
           <Route exact path="/table">
             <TODO />
           </Route>

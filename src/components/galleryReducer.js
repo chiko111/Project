@@ -3,14 +3,14 @@ import {
   FETCH_GALLERY_SUCCESS,
   FETCH_GALLERY_FAILURE,
   ADD_TO_FAVORITES,
-  REMOVE_FROM_FAVORITES,
+  REMOVE_FROM_FAVORITES
 } from "./actionTypes";
 
 const initialState = {
   loading: false,
   gallery: [],
   error: null,
-  favorites: [],
+  favorites: []
 };
 
 const galleryReducer = (state = initialState, action) => {
@@ -24,13 +24,12 @@ const galleryReducer = (state = initialState, action) => {
     case ADD_TO_FAVORITES:
       return {
         ...state,
-        favorites: [...state.favorites, action.payload.id],
+        favorites: [...state.favorites, action.payload.id]
       };
-
     case REMOVE_FROM_FAVORITES:
       return {
         ...state,
-        favorites: state.favorites.filter((id) => id !== action.payload.id),
+        favorites: state.favorites.filter((id) => id !== action.payload.id)
       };
     default:
       return state;
