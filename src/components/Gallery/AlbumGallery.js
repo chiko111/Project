@@ -5,7 +5,7 @@ import Gallery from "./Gallery";
 
 const galleryDef = (state) => state.gallery.gallery;
 
-const AlbumGallery = ({ IDalbum, renderAlbumGallery }) => {
+const AlbumGallery = ({ IDalbum }) => {
   const dispatch = useDispatch();
   const gallery = useSelector(galleryDef);
   const [selectedAlbum, setSelectedAlbum] = useState();
@@ -20,8 +20,8 @@ const AlbumGallery = ({ IDalbum, renderAlbumGallery }) => {
   //   }
   // }, [IDalbum]); // Update selectedAlbum when IDalbum prop changes
 
-  return selectedAlbum && !renderAlbumGallery ? (
-    <Gallery IDalbum={selectedAlbum} />
+  return selectedAlbum ? (
+    <Gallery IDalbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
   ) : (
     <div className="galleryContainer">
       {[...new Set(gallery.map(({ albumId }) => albumId))].map((albumId) => (
