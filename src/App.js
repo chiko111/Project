@@ -27,7 +27,9 @@ const App = () => (
           <Route path="/input">
             <TreeBuilder />
           </Route>
+  <Route>
           <MainGallery />
+  </Route>
           <Route exact path="/table">
             <TODO />
           </Route>
