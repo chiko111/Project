@@ -1,12 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage"; // defaults to localStorage for web and AsyncStorage for react-native
-import rootReducer from "./rootReducer";
+import { configureStore } from '@reduxjs/toolkit';
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web and AsyncStorage for react-native
+import rootReducer from './rootReducer';
 
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage,
-  blacklist: ["game"]
+  blacklist: ['reduxtodo']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

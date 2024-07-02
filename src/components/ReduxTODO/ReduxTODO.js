@@ -1,31 +1,30 @@
 // TODO.js
-import React, { useEffect, useState } from "react";
+import React, { useState } from 'react';
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import {
   addTodo,
   deleteTodo,
-  toggleTodoReadStatus,
-} from "../ReduxTODO/components/actions";
-import { loadTodoList } from "../ReduxTODO/components/actions";
+  toggleTodoReadStatus
+} from '../ReduxTODO/components/actions';
 
 //!Checkbox with done on every element
 // import "./TODO.css";
-const todoSelector = (state) => state.todoRd.todoList;
+const todoSelector = state => state.todoRd.todoList;
 
 const ReduxTODO = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
   const todoList = useSelector(todoSelector);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     if (inputValue) {
       dispatch(addTodo({ text: inputValue, read: false }));
-      setInputValue("");
+      setInputValue('');
     }
   };
-  const handleToggleRead = (i) => {
+  const handleToggleRead = i => {
     dispatch(toggleTodoReadStatus(i));
   };
 
@@ -38,7 +37,7 @@ const ReduxTODO = () => {
             <input
               type="text"
               value={inputValue}
-              onChange={(event) => setInputValue(event.target.value)}
+              onChange={event => setInputValue(event.target.value)}
             />
             <button type="submit">Submit</button>
           </label>

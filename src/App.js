@@ -1,18 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
-import { store, persistor } from "./components/store";
-import Navigation from "./components/Navigation";
-import RouteChangeListener from "./components/RouteChangeListener";
-import TreeBuilder from "./components/TreeBuilder/TreeBuilder";
-import TicTac from "./components/TicTac/TicTac";
-import TODO from "./components/Table/TODO";
-import ReduxTODO from "./components/ReduxTODO/ReduxTODO";
-import MainGallery from "./components/Gallery/AlbumGallery";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
+import MainGallery from './components/Gallery/AlbumGallery';
+import Navigation from './components/Navigation';
+import ReduxTODO from './components/ReduxTODO/ReduxTODO';
+import { persistor, store } from './components/ReduxTODO/components/store';
+import RouteChangeListener from './components/RouteChangeListener';
+import TODO from './components/Table/TODO';
+import TicTac from './components/TicTac/TicTac';
+import TreeBuilder from './components/TreeBuilder/TreeBuilder';
 
-import "./Game.css";
-import "./components/TreeBuilder/TreeBuilder.css";
+import './Game.css';
+import './components/TreeBuilder/TreeBuilder.css';
 
 const App = () => (
   <Provider store={store}>
@@ -27,9 +27,9 @@ const App = () => (
           <Route path="/input">
             <TreeBuilder />
           </Route>
-  <Route>
-          <MainGallery />
-  </Route>
+          <Route path="/gallery">
+            <MainGallery />
+          </Route>
           <Route exact path="/table">
             <TODO />
           </Route>

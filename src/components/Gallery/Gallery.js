@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import LazyLoad from "react-lazyload";
-import { toggleFavorite } from "../galleryActions";
-import GalleryFooter from "./GalleryFooter";
-import AlbumGallery from "./AlbumGallery";
+import React from 'react';
+import LazyLoad from 'react-lazyload';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFavorite } from '../galleryActions';
+import GalleryFooter from './GalleryFooter';
 
-const galleryDef = (state) => state.gallery.gallery;
-const loadingDef = (state) => state.gallery.loading;
-const errorDef = (state) => state.gallery.error;
-const favoritesDef = (state) => state.gallery.favorites;
+const galleryDef = state => state.gallery.gallery;
+const loadingDef = state => state.gallery.loading;
+const errorDef = state => state.gallery.error;
+const favoritesDef = state => state.gallery.favorites;
 
 const Gallery = ({ IDalbum, setSelectedAlbum }) => {
   const dispatch = useDispatch();
@@ -17,13 +16,13 @@ const Gallery = ({ IDalbum, setSelectedAlbum }) => {
   const loading = useSelector(loadingDef);
   const error = useSelector(errorDef);
 
-  const handleToggleFavorite = (id) => {
+  const handleToggleFavorite = id => {
     dispatch(toggleFavorite(id));
   };
 
   if (loading) return <div className="textLoading">Loading...</div>;
   if (error) return <div>Error loading the gallery: {error}</div>;
-  console.log("all", gallery);
+  console.log('all', gallery);
   console.log(IDalbum);
   // if (onGallery) {
   //   return <AlbumGallery />;
@@ -32,11 +31,11 @@ const Gallery = ({ IDalbum, setSelectedAlbum }) => {
     <>
       <div className="galleryContainer">
         {gallery
-          .filter((item) => item.albumId === Number(IDalbum))
-          .map((item) => (
+          .filter(item => item.albumId === Number(IDalbum))
+          .map(item => (
             <div
               className={`galleryComponents ${
-                favorites.includes(item.id) ? "favorite" : ""
+                favorites.includes(item.id) ? 'favorite' : ''
               }`}
               key={item.id}
             >
@@ -48,7 +47,7 @@ const Gallery = ({ IDalbum, setSelectedAlbum }) => {
                 />
                 <button
                   className="favorite-button"
-                  onClick={(e) => {
+                  onClick={e => {
                     e.stopPropagation();
                     handleToggleFavorite(item.id);
                   }}
