@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import "./TODO.css";
+import React, { useEffect, useState } from 'react';
+import './TODO.css';
 
 const TODO = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [todoList, setTodoList] = useState(
-    JSON.parse(localStorage.getItem("todoList")) || []
+    JSON.parse(localStorage.getItem('todoList')) || []
   );
 
   useEffect(() => {
-    localStorage.setItem("todoList", JSON.stringify(todoList));
+    localStorage.setItem('todoList', JSON.stringify(todoList));
   }, [todoList]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     if (inputValue) {
-      setTodoList((prevList) => [...prevList, inputValue]);
-      setInputValue("");
+      setTodoList(prevList => [...prevList, inputValue]);
+      setInputValue('');
     }
   };
 
-  const handleDelete = (indexToDelete) => {
+  const handleDelete = indexToDelete => {
     console.log(todoList);
     console.log(indexToDelete);
     const newTodoList = todoList.filter((_, index) => indexToDelete !== index);
@@ -36,7 +36,7 @@ const TODO = () => {
             <input
               type="text"
               value={inputValue}
-              onChange={(event) => setInputValue(event.target.value)}
+              onChange={event => setInputValue(event.target.value)}
             />
             <button type="submit">Submit</button>
           </label>
@@ -57,5 +57,6 @@ const TODO = () => {
     </div>
   );
 };
+//fix
 
 export default TODO;
