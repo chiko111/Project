@@ -7,7 +7,6 @@ const MainGallery = ({ galleryOn }) => {
   useEffect(() => {
     if (galleryOn) {
       setSelectedAlbum(false);
-      console.log("work");
     }
   }, [galleryOn]);
 

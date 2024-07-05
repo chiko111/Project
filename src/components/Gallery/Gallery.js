@@ -22,11 +22,7 @@ const Gallery = ({ IDalbum, setSelectedAlbum }) => {
 
   if (loading) return <div className="textLoading">Loading...</div>;
   if (error) return <div>Error loading the gallery: {error}</div>;
-  console.log('all', gallery);
-  console.log(IDalbum);
-  // if (onGallery) {
-  //   return <AlbumGallery />;
-  // }
+  
   return (
     <>
       <div className="galleryContainer">

@@ -20,10 +20,7 @@ const TODO = () => {
   };
 
   const handleDelete = indexToDelete => {
-    console.log(todoList);
-    console.log(indexToDelete);
     const newTodoList = todoList.filter((_, index) => indexToDelete !== index);
-    console.log(newTodoList);
     setTodoList(newTodoList);
   };
 

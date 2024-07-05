@@ -1,11 +1,10 @@
 import {
+  FETCH_GALLERY_FAILURE,
   FETCH_GALLERY_REQUEST,
   FETCH_GALLERY_SUCCESS,
-  FETCH_GALLERY_FAILURE,
 } from "./actionTypes";
 
 export const fetchGallery = () => {
-  console.log("fetch return");
   return (dispatch) => {
     dispatch({ type: FETCH_GALLERY_REQUEST });
     fetch("https://jsonplaceholder.typicode.com/photos")
@@ -24,10 +23,10 @@ export const fetchGallery = () => {
 };
 export const playMove = (nextSquares) => ({
   type: "PLAY_MOVE",
-  payload: nextSquares,
+  payload: nextSquares
 });
 
 export const jumpToMove = (nextMove) => ({
   type: "JUMP_TO_MOVE",
-  payload: nextMove,
+  payload: nextMove
 });

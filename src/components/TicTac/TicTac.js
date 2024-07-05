@@ -3,11 +3,10 @@ import { jumpToMove, playMove } from '../action';
 import { Board } from './Board';
 
 const TicTac = () => {
-  console.log(useSelector(state => state));
   const history = useSelector(state => state.game.history);
   const currentMove = useSelector(state => state.game.currentMove);
   const dispatch = useDispatch();
-
+  
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
 
